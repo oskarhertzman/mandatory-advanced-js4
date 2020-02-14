@@ -1,0 +1,153 @@
+.App {
+  text-align: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #33383C;
+  color: #FE686C;
+
+}
+
+h1 {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 50px;
+  color: #FE686C;
+}
+
+table {
+  margin: 0 auto;
+  margin-top: 40px;
+  border-collapse: collapse;
+  border-spacing:0;
+  tr, td {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+%test {
+  position: absolute;
+	content: '';
+	transition: all .1s;
+}
+
+.button {
+	display: inline-block;
+	padding: 5px 30px;
+	color: white;
+	position: absolute;
+	bottom: 4%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	vertical-align: middle;
+	text-decoration: none;
+	font-size: 2vw;
+	transition: all .1s;
+	background-color: #FE686C;
+
+
+	&::before {
+    @extend %test;
+		bottom: -15px;
+		height: 15px;
+		width: 100%;
+		left: 8px;
+		transform: skewX(45deg);
+		background-color: darken(#FE686C, 10%);
+	}
+
+	&::after {
+		@extend %test;
+		right: -15px;
+		height: 100%;
+		width: 15px;
+		bottom: -8px;
+		transform: skewY(45deg);
+		background-color: darken(#FE686C, 15%);
+	}
+
+	&:active {
+		margin-left: 10px;
+		margin-top: 10px;
+		&::before {
+			bottom: -5px;
+			height: 5px;
+			left: 3px;
+		}
+    &::after {
+			right: -5px;
+			width: 5px;
+			bottom: -3px;
+		}
+	}
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.cell {
+  height: 70px;
+  width: 70px;
+  background-color: #FE686C;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  border: 1px solid #000;
+  border-radius: 100px;
+}
+
+.circles {
+  margin: -40px 0 25px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.red-sm {
+  background-color: #4d48dc;
+}
+
+.yellow-sm {
+  background-color: #d6326a;
+}
+
+
+.message {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.emptycell {
+  height: 60px;
+  width: 60px;
+  background-color: #33383C;
+  border-radius: 100px;
+}
+
+.bluecell {
+  height: 60px;
+  width: 60px;
+  background-color: #4d48dc;
+  border-radius: 100px;
+  transition: background-color 0.2s;
+}
+
+.purplecell {
+  height: 60px;
+  width: 60px;
+  background-color: #d6326a;
+  border-radius: 100px;
+  transition: background-color 0.2s;
+}
