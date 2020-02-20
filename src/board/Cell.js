@@ -1,7 +1,6 @@
-import React from 'react';
-import {play} from '../App.js';
-const Cell = ({ value, columnIndex, play }) => {
+import React from "react";
 
+const Cell = ({ value, columnIndex, play }) => {
   let color = 'emptycell';
   if (value === 1) {
     color = 'bluecell';
@@ -16,5 +15,4 @@ const Cell = ({ value, columnIndex, play }) => {
     </td>
   )
 }
-
   export default Cell;

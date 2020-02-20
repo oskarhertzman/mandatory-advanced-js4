@@ -8,5 +8,4 @@ const Row = ({ row, play }) => {
     </tr>
   )
 }
-
 export default Row;
